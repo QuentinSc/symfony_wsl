@@ -1,0 +1,18 @@
+# Symfony
+/app/var/
+/app/vendor/
+/app/.env.local
+/app/.env.*.local
+/app/public/bundles/
+
+# IDE
+.idea/
+.vscode/
+
+# Docker
+.docker/data/
+.docker/logs/
+
+# System files
+.DS_Store
+Thumbs.db 
