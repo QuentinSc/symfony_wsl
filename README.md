@@ -2,11 +2,12 @@
 
 ## Table des matières
 1. [Vue d'ensemble](#vue-densemble)
-2. [Prérequis et installation de l'environnement](#prérequis-et-installation-de-lenvironnement)
-3. [Installation du projet](#installation-du-projet)
-4. [Architecture technique](#architecture-technique)
-5. [Guide de développement](#guide-de-développement)
-6. [Dépannage](#dépannage)
+2. [Pourquoi WSL2/Ubuntu ?](#pourquoi-wsl2ubuntu)
+3. [Prérequis et installation de l'environnement](#prérequis-et-installation-de-lenvironnement)
+4. [Installation du projet](#installation-du-projet)
+5. [Architecture technique](#architecture-technique)
+6. [Guide de développement](#guide-de-développement)
+7. [Dépannage](#dépannage)
 
 ## Vue d'ensemble
 
@@ -16,6 +17,32 @@ Cet environnement permet de développer des applications Symfony sous Windows en
 - Nginx comme serveur web
 - PHP 8.2-FPM pour l'exécution du code
 - MySQL 8.0 comme base de données
+
+## Pourquoi WSL2/Ubuntu ?
+
+L'utilisation de WSL2 avec Ubuntu plutôt que Windows en natif présente plusieurs avantages majeurs :
+
+### Performance
+- Les performances I/O (lecture/écriture fichiers) sont nettement meilleures sous WSL2 que via des volumes partagés Windows
+- La compilation et l'exécution du code PHP sont plus rapides
+- Le système de cache Symfony est plus performant
+
+### Compatibilité
+- Environnement Linux natif, identique à la production
+- Meilleure compatibilité avec les outils de développement
+- Pas de problèmes de fins de ligne (CRLF vs LF)
+- Pas de problèmes de casse des fichiers (Windows est insensible à la casse)
+
+### Développement
+- Accès à tous les outils CLI Linux natifs
+- Meilleure intégration avec Docker (pas de problèmes de volumes)
+- Configuration plus proche de l'environnement de production
+- Pas besoin de gérer les permissions Windows/Linux
+
+### Ressources
+- Utilisation plus efficace des ressources système
+- Meilleure isolation des processus
+- Pas de surcharge due à la virtualisation complète
 
 ## Prérequis et installation de l'environnement
 
